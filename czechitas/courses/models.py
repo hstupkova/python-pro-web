@@ -6,3 +6,9 @@ class Course(models.Model):
   end = models.DateTimeField()
   description = models.CharField(max_length=1000)
   price = models.IntegerField()
+
+class Branch(models.Model):
+  city = models.CharField(max_length=100)
+  foundation = models.DateField()
+  email = models.EmailField()
+  employees = models.IntegerField()

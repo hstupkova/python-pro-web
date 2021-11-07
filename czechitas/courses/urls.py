@@ -13,4 +13,5 @@ urlpatterns = [
     path('pobocka/<int:pk>', views.BranchDetailView.as_view(), name="branch_detail"),
     path("prihlaska", views.ApplicationCreateView.as_view(), name="application_create"),
     path("prihlaska/potvrzeni", views.ApplicationConfirmationView.as_view(), name="application_confirmation"),
+    path("prihlaska-do-tymu", views.PersonRegisterView.as_view(), name="person_register"),
 ]

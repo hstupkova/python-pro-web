@@ -41,3 +41,9 @@ class ApplicationCreateView(CreateView):
 
 class ApplicationConfirmationView(TemplateView):
     template_name = "application_confirmation.html"
+
+class PersonRegisterView(CreateView):
+    model = models.Person
+    template_name = "person_register.html"
+    fields = ["name", "surname", "email", "position"]
+    success_url = reverse_lazy("application_confirmation")

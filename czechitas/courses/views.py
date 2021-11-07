@@ -15,3 +15,11 @@ class AboutView(TemplateView):
 class CourseListView(ListView):
     model = models.Course
     template_name = "course_list.html"
+
+class BranchListView(ListView):
+    model = models.Branch
+    template_name = "branch_list.html"
+
+class PersonListView(ListView):
+    model = models.Person
+    template_name = "person_list.html"

@@ -13,8 +13,17 @@ class Branch(models.Model):
   email = models.EmailField()
   employees = models.IntegerField()
 
+  class Meta:
+    verbose_name_plural = "Branches"
+
+  def __str__(self) -> str:
+    return self.city
+
 class Person(models.Model):
   name = models.CharField(max_length=100)
   surname = models.CharField(max_length=100)
   email = models.EmailField()
   position = models.CharField(max_length=100)
+
+  def __str__(self) -> str:
+    return self.surname

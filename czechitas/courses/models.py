@@ -21,6 +21,15 @@ class Branch(models.Model):
   def __str__(self) -> str:
     return self.city
 
+class Person(models.Model):
+  name = models.CharField(max_length=100)
+  surname = models.CharField(max_length=100)
+  email = models.EmailField()
+  position = models.CharField(max_length=100)
+
+  def __str__(self) -> str:
+    return self.surname
+
 class Course(models.Model):
   name = models.CharField(max_length=100)
   start = models.DateTimeField()
@@ -33,11 +42,3 @@ class Course(models.Model):
   def __str__(self) -> str:
     return self.name
 
-class Person(models.Model):
-  name = models.CharField(max_length=100)
-  surname = models.CharField(max_length=100)
-  email = models.EmailField()
-  position = models.CharField(max_length=100)
-
-  def __str__(self) -> str:
-    return self.surname

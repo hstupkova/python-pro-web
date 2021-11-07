@@ -12,3 +12,9 @@ class Branch(models.Model):
   foundation = models.DateField()
   email = models.EmailField()
   employees = models.IntegerField()
+
+class Person(models.Model):
+  name = models.CharField(max_length=100)
+  surname = models.CharField(max_length=100)
+  email = models.EmailField()
+  position = models.CharField(max_length=100)

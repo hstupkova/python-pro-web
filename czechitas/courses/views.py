@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from . import models
 
 class IndexView(TemplateView):
@@ -23,3 +23,7 @@ class BranchListView(ListView):
 class PersonListView(ListView):
     model = models.Person
     template_name = "person_list.html"
+
+class CourseDetailView(DetailView):
+    model = models.Course
+    template_name = "course_detail.html"

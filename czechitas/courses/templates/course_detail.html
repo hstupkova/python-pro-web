@@ -1,0 +1,17 @@
+<h2>{{ object.name }}</h2>
+
+<h3>Kdy</h3>
+<p>
+  {{ object.start | date }} <br />
+  v {{ object.start | time }}-{{ object.end | time }} hodin
+</p>
+
+<h3>Kde</h3>
+<p>
+  Pobočka {{ object.branch }}.
+</p>
+
+<h3>Cena</h3>
+<p>{{ object.price }} Kč</p>
+
+<p>{{ object.description }}</p>

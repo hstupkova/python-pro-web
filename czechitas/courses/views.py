@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 from . import models
+from django.urls import reverse_lazy
 
 class IndexView(TemplateView):
     template_name = "index.html"
@@ -31,3 +32,12 @@ class CourseDetailView(DetailView):
 class BranchDetailView(DetailView):
     model = models.Branch
     template_name = "branch_detail.html"
+
+class ApplicationCreateView(CreateView):
+    model = models.Application
+    template_name = "application_create.html"
+    fields = ["email", "first_name", "last_name", "motivation", "course"]
+    success_url = reverse_lazy("application_confirmation")
+
+class ApplicationConfirmationView(TemplateView):
+    template_name = "application_confirmation.html"

@@ -45,3 +45,9 @@ class Course(models.Model):
   def __str__(self) -> str:
     return self.name
 
+class Application(models.Model):
+  email = models.CharField(max_length=100)
+  first_name = models.CharField(max_length=100)
+  last_name = models.CharField(max_length=100)
+  motivation = models.TextField()
+  course = models.ForeignKey(Course, on_delete=models.SET_NULL, null=True)

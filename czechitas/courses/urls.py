@@ -10,5 +10,7 @@ urlpatterns = [
     path('pobocky', views.BranchListView.as_view(), name="branch_list"),
     path('zamestnanci', views.PersonListView.as_view(), name="person_list"),
     path('kurz/<int:pk>', views.CourseDetailView.as_view(), name="course_detail"),
-    path('pobocka/<int:pk>', views.BranchDetailView.as_view(), name="branch_detail")
+    path('pobocka/<int:pk>', views.BranchDetailView.as_view(), name="branch_detail"),
+    path("prihlaska", views.ApplicationCreateView.as_view(), name="application_create"),
+    path("prihlaska/potvrzeni", views.ApplicationConfirmationView.as_view(), name="application_confirmation"),
 ]

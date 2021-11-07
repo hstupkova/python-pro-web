@@ -21,6 +21,9 @@ class Branch(models.Model):
   def __str__(self) -> str:
     return self.city
 
+  def courses(self):
+    return Course.objects.filter(branch=self)
+
 class Person(models.Model):
   name = models.CharField(max_length=100)
   surname = models.CharField(max_length=100)

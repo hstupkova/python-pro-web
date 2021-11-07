@@ -8,3 +8,10 @@
 <p>
   {{ object.email }}
 </p>
+
+<h3>Organizované kurzy</h3>
+<ul>
+  {% for item in object.courses %}
+    <li>{{ item.name }}</li>
+  {% endfor %}
+</ul>

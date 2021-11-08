@@ -42,6 +42,8 @@ class Course(models.Model):
   price = models.IntegerField()
   category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
   branch = models.ForeignKey(Branch, on_delete=models.SET_NULL, null=True, blank=True)
+  lecturer = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True, blank=True, related_name="lecturer")
+  event_coordinator = models.ForeignKey(Person, on_delete=models.SET_NULL, null=True, blank=True, related_name="coordinator")
 
   def __str__(self) -> str:
     return self.name

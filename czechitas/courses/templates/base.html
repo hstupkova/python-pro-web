@@ -1,0 +1,19 @@
+{% load bootstrap4 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+
+<nav>
+  <a href="{% url 'index' %}">Domů</a> |
+  <a href="{% url 'course_list' %}">Kurzy</a> |
+  <a href="{% url 'application_create' %}">Přihláška na kurz</a> |
+  <a href="{% url 'person_register' %}">Přihláška do týmu</a> |
+  <a href="{% url 'branch_list' %}">Pobočky</a> |
+  <a href="{% url 'person_list' %}">Zaměstnanci</a> |
+  <a href="{% url 'contacts' %}">Kontakty</a> |
+  <a href="{% url 'about' %}">O nás</a>
+</nav>
+
+{% block content %}
+
+{% endblock %}

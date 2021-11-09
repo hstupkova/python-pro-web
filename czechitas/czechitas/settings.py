@@ -28,6 +28,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'bootstrap4',
     'courses.apps.CoursesConfig',
     'django.contrib.admin',
     'django.contrib.auth',

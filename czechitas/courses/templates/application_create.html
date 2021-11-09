@@ -1,7 +1,14 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
 <h2>Přihláška na kurz Czechitas</h2>
 
 <form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <input type="submit" value="Odeslat přihlášku" />
+  {% csrf_token %} {% bootstrap_form form %} {% buttons %}
+  <input type="submit" value="Odeslat" class="btn btn-primary" />
+  {% endbuttons %}
 </form>
+
+{% endblock %}

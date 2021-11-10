@@ -39,6 +39,12 @@ class ApplicationCreateView(CreateView):
     fields = ["email", "first_name", "last_name", "motivation", "course"]
     success_url = reverse_lazy("application_confirmation")
 
+    def form_valid(self, form):
+        course_id = self.kwargs['pk']
+        course = models.Course.objects.get(pk=course_id)
+        form.instance.course = course
+        return super().form_valid(form)
+
 class ApplicationConfirmationView(TemplateView):
     template_name = "application_confirmation.html"
 

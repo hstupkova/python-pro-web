@@ -1,3 +1,10 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<h2>Seznam poboček</h2>
+
 <ul>
   {% for item in object_list %}
     <li>
@@ -7,3 +14,5 @@
     </li>
   {% endfor %}
 </ul>
+
+{% endblock %}

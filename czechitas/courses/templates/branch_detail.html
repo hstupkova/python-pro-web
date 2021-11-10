@@ -1,3 +1,8 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+
+{% block content %}
+
 <h2>Pobočka {{ object.city }}</h2>
 
 <p>
@@ -15,3 +20,5 @@
     <li>{{ item.name }}</li>
   {% endfor %}
 </ul>
+
+{% endblock %}
